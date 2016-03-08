@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['contador',['Contador',['../classContador.html',1,'']]],
-  ['contador_2ejava',['Contador.java',['../Contador_8java.html',1,'']]],
-  ['cdi_5factividad_5f3',['cdi_actividad_3',['../md_README.html',1,'']]]
+  ['b',['B',['../classB.html',1,'B'],['../classB.html#a64880fe126d9d91e9b9226f56d0821ec',1,'B.B()']]],
+  ['b_2ejava',['B.java',['../B_8java.html',1,'']]]
 ];

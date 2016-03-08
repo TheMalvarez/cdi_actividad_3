@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['incrementar',['incrementar',['../classContador.html#a94bb24ba7505abfdd40e762db79be684',1,'Contador']]]
+  ['b',['B',['../classB.html#a64880fe126d9d91e9b9226f56d0821ec',1,'B']]]
 ];
