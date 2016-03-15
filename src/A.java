@@ -5,7 +5,7 @@ class A {
     /**
      * Muestra un mensaje por pantalla y espera un segundo
      */
-    public void EnterAndWait(){
+    public synchronized void EnterAndWait(){
         System.out.println("Hilo:" + Thread.currentThread().getId());
 
         try{

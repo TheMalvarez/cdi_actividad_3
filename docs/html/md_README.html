@@ -84,7 +84,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>No.Usando Synchronized o usando un join entre los threads, en este caso no seria concurrente.</p>
 <h2>3.2 Introducción a la sincronización de hilos</h2>
 <h4>4. ¿Cuál es el resultado? ¿Cuántos hilos pueden estar simultáneamente ejecutando el método EnterAndWait()?</h4>
-<p>Los hilos se inician en orden pero algunos de ellos pueden no finalizar en el mismo orden en el que se inicializaron. </p>
+<p>Los hilos se inician en orden pero algunos de ellos pueden no finalizar en el mismo orden en el que se inicializaron.</p>
+<h4>5. Modifica el código para que solo un hilo pueda estar ejecutando el método EnterAndWait() en cualquier instante. Pruébalo. ¿Qué supone respecto del grado de concurrencia del código este cambio?</h4>
+<p>El código no es concurrente porque solo 1 hilo puede estar llamando al EnterAndWait() de la clase A y por lo tanto cada llamada se ejecuta en secuencial.</p>
+<h4>6. ¿Tendría el mismo efecto el hacer que sólo un hilo pueda ejecutar el método run() de la clase <a class="el" href="classB.html" title="Clase B que se encarga de llamar a la clase A. ">B</a>? ¿Por qué o por qué no?</h4>
+<p>No, porque existen varios objetos de la clase <a class="el" href="classB.html" title="Clase B que se encarga de llamar a la clase A. ">B</a>. Cada objeto es accedido por un único hilo, por lo tanto no se comparte y no hace falta sincronizarlo. Poner el <code>synchronized</code> en el <code>run()</code> es lo mismo que no ponerlo a efectos prácticos en este ejemplo. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

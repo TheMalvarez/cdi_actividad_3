@@ -11,7 +11,7 @@ public class Contador {
 	 * @param n numero de incrementos de c
 	 * @return retorna el valor de c
 	 */
-    public static int incrementar(int n){
+    public synchronized static int incrementar(int n){
         for (int i = 0; i < n; i++) {
 			c++;
 			try {
@@ -21,6 +21,7 @@ public class Contador {
 				System.out.println("Error sleep");
 			}
 		}
+        System.out.println("Contador:" + c);
         return c;
     }
 

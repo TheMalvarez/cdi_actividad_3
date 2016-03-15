@@ -8,4 +8,12 @@ No.\-Usando Synchronized o usando un join entre los threads, en este caso no ser
 
 \paragraph*{4. ¿\-Cuál es el resultado? ¿\-Cuántos hilos pueden estar simultáneamente ejecutando el método Enter\-And\-Wait()?}
 
-Los hilos se inician en orden pero algunos de ellos pueden no finalizar en el mismo orden en el que se inicializaron. 
+Los hilos se inician en orden pero algunos de ellos pueden no finalizar en el mismo orden en el que se inicializaron.
+
+\paragraph*{5. Modifica el código para que solo un hilo pueda estar ejecutando el método Enter\-And\-Wait() en cualquier instante. Pruébalo. ¿\-Qué supone respecto del grado de concurrencia del código este cambio?}
+
+El código no es concurrente porque solo 1 hilo puede estar llamando al Enter\-And\-Wait() de la clase A y por lo tanto cada llamada se ejecuta en secuencial.
+
+\paragraph*{6. ¿\-Tendría el mismo efecto el hacer que sólo un hilo pueda ejecutar el método run() de la clase \hyperlink{classB}{B}? ¿\-Por qué o por qué no?}
+
+No, porque existen varios objetos de la clase \hyperlink{classB}{B}. Cada objeto es accedido por un único hilo, por lo tanto no se comparte y no hace falta sincronizarlo. Poner el {\ttfamily synchronized} en el {\ttfamily run()} es lo mismo que no ponerlo a efectos prácticos en este ejemplo. 

@@ -9,7 +9,7 @@ public class Actvidad3_3 {
      * @param args Argumentos de la consola
      */
     public static void main(String[] args){
-        int nHilos = 70;
+        int nHilos = 3;
 
         A a = new A();
 
